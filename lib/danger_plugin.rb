@@ -233,7 +233,7 @@ module Danger
     #
     # @return [void]
     def send_inline_comment(results, method)
-      dir = "#{Dir.pwd}/"
+      dir = "#{Dir.pwd}/tmp/sandbox/workspace"
       results.each do |r|
         filename = r['file'].gsub(dir, '')
         send(method, r['reason'], file: filename, line: r['line'])
